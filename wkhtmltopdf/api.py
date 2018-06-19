@@ -14,11 +14,11 @@ def run_server(handler, host, port):
     server = HTTPServer((host, port), handler)
     try:
         server.serve_forever()
-        print time.asctime(), 'Starting server (http://%s:%s), use <Ctrl-C> to stop' % (host, port)
+        print(time.asctime(), 'Starting server (http://%s:%s), use <Ctrl-C> to stop' % (host, port))
         return True
     except KeyboardInterrupt:
         server.server_close()
-        print time.asctime(), 'Stopping server (http://%s:%s)' % (host, port)
+        print(time.asctime(), 'Stopping server (http://%s:%s)' % (host, port))
         return True
 
 
